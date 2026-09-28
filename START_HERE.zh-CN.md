@@ -17,6 +17,8 @@ python3 -m http.server 8000 --bind 127.0.0.1
 - `index.html`：个人简介、研究方向、论文及教育经历。
 - `cv.html`：网页版 CV，包含研究兴趣、教育和论文。点击 Print / Save as PDF 可调用浏览器打印。
 - `assets/profile.jpg`：正脸毕业照原图；圆形取景通过首页 CSS 控制。
+- `robots.txt`：允许搜索引擎抓取，并提供站点地图地址。
+- `sitemap.xml`：列出首页和网页版 CV 的正式地址。
 - `CHECKS.md`：本次检查结果及测试边界。
 - `.nojekyll`：静态站点标记，迁移网站时保留。
 - `README.md`：CV 解析与后续维护约定；其中模板示例仅用于说明。
@@ -29,7 +31,9 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 已有网页 CV 入口应继续保留。以后添加经确认可公开的 PDF 简历时，可另加一个 PDF 下载入口。当前网站没有提供 PDF 附件。
 
-目前两个页面均保留 `noindex, nofollow`；这是搜索收录设置，不是访问控制。确定正式公开地址及收录意愿后，再按实际部署情况更新。本文不表示网站已经发布。
+已按用户要求开放搜索收录：两个页面均使用 `index, follow`，`robots.txt` 允许抓取，`sitemap.xml` 列出首页和 CV。canonical 使用正式地址 `https://xxwlyl.github.io/` 和 `https://xxwlyl.github.io/cv.html`。这些设置允许抓取和收录，不保证立即出现在搜索结果中。
+
+可在 Google Search Console 或 Bing Webmaster Tools 验证网站所有权后提交 `https://xxwlyl.github.io/sitemap.xml`；当前未代为提交或验证所有权。未来更换域名时，需同步修改两页 canonical、首页 `og:url`、`robots.txt` 和 `sitemap.xml` 中的地址。
 
 原始资料、解析记录及浏览器测试工具应一直放在网站目录外。迁移时仅复制本目录，不要把其上级目录作为网站根目录。
 

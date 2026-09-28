@@ -1,10 +1,18 @@
 # 个性化主页检查记录
 
-检查日期：2026-09-28。本轮更新：主页和 CV 的教育经历统一为学校标题、学位及院系正文，日期列加宽并按基线对齐。此前的毕业照替换及 CV 合作句删除一并保留。
+检查日期：2026-09-28。本轮更新：按用户要求开放首页及 CV 的搜索收录，增加 canonical、首页分享地址、robots.txt 和 sitemap.xml。正文、样式及脚本未改动。
 
-## 本次结果
+## 搜索收录配置检查
 
-使用 Chromium 151.0.7922.34 / Playwright Core 1.55.1，通过实际本地 HTTP 地址加载本轮修改后的页面；41 组适用检查通过，另 2 组引用控件检查因 BibTeX 已移除而不适用。0 失败，0 浏览器控制台或资源错误。
+- 两页各有一个 `robots` 标签，均为 `index, follow`，canonical 分别指向正式首页和 CV 地址。
+- `robots.txt` 允许所有爬虫抓取首页与 CV，并声明正式站点地图地址。
+- `sitemap.xml` 使用标准 XML 命名空间，仅列出两页 HTTPS canonical 地址。
+- 本轮验证 HTML 元数据、爬虫规则、XML 结构和 Git 差异；完整浏览器布局检查沿用上一轮结果，未重复运行。
+- 配置开放不等于已被搜索引擎收录；未代为提交 Search Console 或验证网站所有权。
+
+## 上一轮浏览器结果（教育经历对齐）
+
+使用 Chromium 151.0.7922.34 / Playwright Core 1.55.1，通过实际本地 HTTP 地址加载教育经历对齐后的页面；41 组适用检查通过，另 2 组引用控件检查因 BibTeX 已移除而不适用。0 失败，0 浏览器控制台或资源错误。
 
 - 根路径 `/` 和项目子路径 `/academic-homepage/` 均实际测试。
 - 首页、网页版 CV 在 320 / 390 / 768 / 1440 像素宽度下无页面级横向溢出。
@@ -26,7 +34,7 @@
 - 新增资源链接已通过出版方、arXiv、Crossref 元数据和作者仓库 README 核对，三组代码仓库均对应准确题目。论文作者、标题、会议、年份与简介未改动。
 - 网页已清除占位资料、示例论文和无内容栏目。
 - 原始私人资料、解析记录、备份和测试工具位于网站目录外，不纳入网站包。
-- 网站保留 `noindex, nofollow`；没有虚构站点域名或学术账号。
+- 用户已明确允许搜索收录，网站使用 `index, follow`；正式域名为 `https://xxwlyl.github.io/`，没有虚构学术账号。
 
 ## 测试边界
 
@@ -35,7 +43,7 @@
 - 本地相对链接已验证。Blowfish 的 USENIX 页面、EDQC 的 arXiv 页面及三个 GitHub 仓库均可访问；ComGAT-PPIS DOI 可解析至 IEEE Xplore，并由 Crossref 的 IEEE 元数据确认标题和完整作者。IEEE 页面存在 JavaScript 验证，未声称已自动读取全文。邮箱投递未测试。
 - 浏览器检查运行于本地；网站发布状态与对应版本可从 [GitHub 部署记录](https://github.com/xxwlyl/xxwlyl.github.io/actions) 查看。
 
-## 已测网页文件 SHA-256
+## 上一轮浏览器测试文件 SHA-256
 
 ```text
 index.html         e2d5e847d14f0a594de0c07c69a79ae7dc581d21e9ece6e640184aeb9e15bbe8
