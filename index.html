@@ -94,19 +94,8 @@
     .paper-description { font-size: 13px; line-height: 1.75; margin: 10px 0 0; color: var(--text); }
     .venue { color: var(--muted); font-size: 13px; margin: 0 0 10px; font-style: italic; }
     .paper-links { display: flex; gap: 7px; align-items: flex-start; flex-wrap: wrap; margin-top: 11px; }
-    .resource-link, .citation summary { border: 1px solid #d3dfe4; border-radius: 4px; color: var(--accent); padding: 3px 10px; font-size: 11px; line-height: 1.65; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; }
+    .resource-link { border: 1px solid #d3dfe4; border-radius: 4px; color: var(--accent); padding: 3px 10px; font-size: 11px; line-height: 1.65; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; }
     a.resource-link:hover { background: var(--accent-tint); }
-    .citation { width: 100%; margin-top: 11px; }
-    .citation summary { list-style: none; cursor: pointer; user-select: none; }
-    .citation summary::-webkit-details-marker { display: none; }
-    .citation summary::before { content: "+"; font-size: 13px; line-height: 1; }
-    .citation[open] summary::before { content: "−"; }
-    .citation summary:hover, .citation[open] summary { background: var(--accent-tint); }
-    .citation-box { position: relative; padding: 15px; margin-top: 9px; border: 1px solid var(--line); border-radius: 4px; background: var(--subtle); }
-    .citation-box pre { margin: 0 0 12px; white-space: pre-wrap; overflow-wrap: anywhere; font: 11px/1.7 ui-monospace, SFMono-Regular, Consolas, monospace; color: var(--text); }
-    .copy-citation { display: none; cursor: pointer; padding: 5px 10px; border: 1px solid #cedbe1; background: white; border-radius: 4px; color: var(--accent); font-size: 11px; }
-    .js .copy-citation { display: inline-block; }
-    .copy-citation:hover { background: var(--accent-tint); }
     .timeline { margin: 0; padding: 0; list-style: none; }
     .timeline li { display: grid; grid-template-columns: 132px minmax(0,1fr); gap: 20px; margin-bottom: 24px; }
     .timeline li:last-child { margin-bottom: 0; }
@@ -120,8 +109,6 @@
     .footer-inner a { color: var(--muted); text-decoration: none; }
     .footer-inner a:hover { color: var(--accent); }
     .footer-right { display: flex; align-items: center; gap: 24px; }
-    .status-toast { position: fixed; left: 50%; bottom: 22px; transform: translate(-50%, 12px); background: var(--ink); color: white; padding: 10px 18px; border-radius: 5px; font-size: 13px; opacity: 0; pointer-events: none; z-index: 100; transition: opacity .15s, transform .15s; max-width: calc(100% - 32px); width: max-content; }
-    .status-toast.visible { opacity: 1; transform: translate(-50%,0); }
     @media (max-width: 1270px) {
       .masthead-inner, .page-shell, .footer-inner { margin-left: 40px; margin-right: 40px; }
       .page-shell { gap: 50px; grid-template-columns: 218px minmax(0,1fr); }
@@ -177,7 +164,7 @@
       *, *::before, *::after { transition: none !important; }
     }
     @media print {
-      .masthead, .menu-toggle, .copy-citation, .status-toast, .footer-right, .cv-link { display: none !important; }
+      .masthead, .menu-toggle, .footer-right, .cv-link { display: none !important; }
       body { color: #222; font-size: 11pt; }
       .page-shell { margin: 0; padding: 0; gap: 28px; grid-template-columns: 160px minmax(0,1fr); }
       .profile { position: static; }
@@ -257,18 +244,6 @@
             <p class="authors"><span class="self-author">Yilong Luo</span>, Yulong Zhang, Siyuan Xu, Siyi Zhang, Yanwen Xia, Mingyu Wu, Diyu Zhou, Tao Xie, Chenxi Wang</p>
             <p class="venue">ACM SIGOPS Annual Technical Conference (ATC), 2026</p>
             <p class="paper-description">An adaptive memory overcommitment framework for disaggregated VMs that dynamically adjusts page-management granularity to runtime access skewness and defers and batches EPT invalidations, exposing cold memory hidden in huge pages while preserving translation locality and swap efficiency.</p>
-            <details class="citation">
-              <summary aria-label="BibTeX for Chameleon: Adaptive Memory Overcommitment for Disaggregated Virtual Machines">BibTeX</summary>
-              <div class="citation-box">
-                <pre><code>@inproceedings{luo2026chameleon,
-  title     = {{Chameleon: Adaptive Memory Overcommitment for Disaggregated Virtual Machines}},
-  author    = {Yilong Luo and Yulong Zhang and Siyuan Xu and Siyi Zhang and Yanwen Xia and Mingyu Wu and Diyu Zhou and Tao Xie and Chenxi Wang},
-  booktitle = {ACM SIGOPS Annual Technical Conference (ATC)},
-  year      = {2026}
-}</code></pre>
-                <button class="copy-citation" type="button">Copy citation</button>
-              </div>
-            </details>
           </div>
         </article>
         <article class="publication" aria-labelledby="paper-c2">
@@ -278,18 +253,10 @@
             <p class="authors">Yulong Zhang, <span class="self-author">Yilong Luo</span>, Diyu Zhou, Quan Chen, Quanxi Li, Mosong Zhou, Lei Zhu, Senbo Fu, Qian Peng, Huimin Cui, Xiaobing Feng, Tao Xie, Chenxi Wang</p>
             <p class="venue">USENIX Symposium on Operating Systems Design and Implementation (OSDI), 2026</p>
             <p class="paper-description">A paravirtualized memory overcommitment framework for disaggregated memory that enables μs-scale cold memory reclamation and restoration via guest-level THP-aware hotness tracking and host-level EPT-only reclamation, bypassing costly guest page table and I/O page table modifications.</p>
-            <details class="citation">
-              <summary aria-label="BibTeX for Blowfish: Elastic Virtual Machine Memory for Disaggregated Memory">BibTeX</summary>
-              <div class="citation-box">
-                <pre><code>@inproceedings{zhang2026blowfish,
-  title     = {{Blowfish: Elastic Virtual Machine Memory for Disaggregated Memory}},
-  author    = {Yulong Zhang and Yilong Luo and Diyu Zhou and Quan Chen and Quanxi Li and Mosong Zhou and Lei Zhu and Senbo Fu and Qian Peng and Huimin Cui and Xiaobing Feng and Tao Xie and Chenxi Wang},
-  booktitle = {USENIX Symposium on Operating Systems Design and Implementation (OSDI)},
-  year      = {2026}
-}</code></pre>
-                <button class="copy-citation" type="button">Copy citation</button>
-              </div>
-            </details>
+            <div class="paper-links" aria-label="Resources for Blowfish: Elastic Virtual Machine Memory for Disaggregated Memory">
+              <a class="resource-link" href="https://www.usenix.org/conference/osdi26/presentation/zhang-yulong" target="_blank" rel="noopener noreferrer" aria-label="Read paper: Blowfish: Elastic Virtual Machine Memory for Disaggregated Memory (opens in a new tab)">Paper <span aria-hidden="true">↗</span></a>
+              <a class="resource-link" href="https://github.com/ICTPLSys/Blowfish" target="_blank" rel="noopener noreferrer" aria-label="Source code for Blowfish: Elastic Virtual Machine Memory for Disaggregated Memory (opens in a new tab)">Code <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </article>
         <article class="publication" aria-labelledby="paper-c3">
@@ -299,18 +266,10 @@
             <p class="authors">Yu Zhang, <span class="self-author">Yilong Luo</span>, Mingyuan Ma, Yao Chen, Enqiang Zhu, Jin Xu, Chanjuan Liu</p>
             <p class="venue">ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR), 2026</p>
             <p class="paper-description">Proposed EDQC, a framework leveraging adaptive energy diffusion and conductance-based extraction to discover maximum γ-quasi-cliques under explicit density constraints in interaction graphs.</p>
-            <details class="citation">
-              <summary aria-label="BibTeX for Cohesive Group Discovery in Interaction Graphs under Explicit Density Constraints">BibTeX</summary>
-              <div class="citation-box">
-                <pre><code>@inproceedings{zhang2026cohesive,
-  title     = {{Cohesive Group Discovery in Interaction Graphs under Explicit Density Constraints}},
-  author    = {Yu Zhang and Yilong Luo and Mingyuan Ma and Yao Chen and Enqiang Zhu and Jin Xu and Chanjuan Liu},
-  booktitle = {ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)},
-  year      = {2026}
-}</code></pre>
-                <button class="copy-citation" type="button">Copy citation</button>
-              </div>
-            </details>
+            <div class="paper-links" aria-label="Resources for Cohesive Group Discovery in Interaction Graphs under Explicit Density Constraints">
+              <a class="resource-link" href="https://arxiv.org/abs/2508.04174" target="_blank" rel="noopener noreferrer" aria-label="Read paper: Cohesive Group Discovery in Interaction Graphs under Explicit Density Constraints (opens in a new tab)">Paper <span aria-hidden="true">↗</span></a>
+              <a class="resource-link" href="https://github.com/BiscuitZhang/EDQC" target="_blank" rel="noopener noreferrer" aria-label="Source code for Cohesive Group Discovery in Interaction Graphs under Explicit Density Constraints (opens in a new tab)">Code <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </article>
         <article class="publication" aria-labelledby="paper-c4">
@@ -320,18 +279,10 @@
             <p class="authors">Yu Zhang, Qiqi Bao, <span class="self-author">Yilong Luo</span>, Zhoupeng Li, Mingyuan Ma, Enqiang Zhu, Jin Xu</p>
             <p class="venue">IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2025</p>
             <p class="paper-description">Proposed a hierarchical graph attention network integrating residue-level and meso-scale community representations via Louvain-based community detection and gated fusion for protein-protein interaction site prediction.</p>
-            <details class="citation">
-              <summary aria-label="BibTeX for ComGAT-PPIS: A Community-Augmented Graph Attention Network for Protein-Protein Interaction Site Prediction">BibTeX</summary>
-              <div class="citation-box">
-                <pre><code>@inproceedings{zhang2025comgatppis,
-  title     = {{ComGAT-PPIS: A Community-Augmented Graph Attention Network for Protein-Protein Interaction Site Prediction}},
-  author    = {Yu Zhang and Qiqi Bao and Yilong Luo and Zhoupeng Li and Mingyuan Ma and Enqiang Zhu and Jin Xu},
-  booktitle = {IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
-  year      = {2025}
-}</code></pre>
-                <button class="copy-citation" type="button">Copy citation</button>
-              </div>
-            </details>
+            <div class="paper-links" aria-label="Resources for ComGAT-PPIS: A Community-Augmented Graph Attention Network for Protein-Protein Interaction Site Prediction">
+              <a class="resource-link" href="https://doi.org/10.1109/BIBM66473.2025.11356363" target="_blank" rel="noopener noreferrer" aria-label="Read paper: ComGAT-PPIS: A Community-Augmented Graph Attention Network for Protein-Protein Interaction Site Prediction (opens in a new tab)">Paper <span aria-hidden="true">↗</span></a>
+              <a class="resource-link" href="https://github.com/BiscuitZhang/ComGAT" target="_blank" rel="noopener noreferrer" aria-label="Source code for ComGAT-PPIS: A Community-Augmented Graph Attention Network for Protein-Protein Interaction Site Prediction (opens in a new tab)">Code <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </article>
       </section>
@@ -361,7 +312,6 @@
       <div class="footer-right"><span>Last updated: September 2026</span><a href="#about">Back to top ↑</a></div>
     </div>
   </footer>
-  <div class="status-toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
   <script>
     /* Small, dependency-free enhancements. Main content remains readable without JavaScript. */
@@ -430,45 +380,6 @@
       }, { passive: true });
       updateActiveSection();
 
-      const toast = document.querySelector('.status-toast');
-      let toastTimer;
-      function notify(message) {
-        clearTimeout(toastTimer);
-        toast.textContent = message;
-        toast.classList.add('visible');
-        toastTimer = setTimeout(() => toast.classList.remove('visible'), 3200);
-      }
-      async function copyText(text) {
-        if (navigator.clipboard && window.isSecureContext) {
-          try { await navigator.clipboard.writeText(text); return; } catch (_) { /* Try local-file fallback below. */ }
-        }
-        const field = document.createElement('textarea');
-        field.value = text;
-        field.style.cssText = 'position:fixed;left:-9999px;top:0;';
-        document.body.appendChild(field);
-        const previousFocus = document.activeElement;
-        field.focus();
-        field.select();
-        let copied = false;
-        try { copied = document.execCommand('copy'); }
-        finally { field.remove(); if (previousFocus instanceof HTMLElement) previousFocus.focus(); }
-        if (!copied) throw new Error('Clipboard permission unavailable');
-      }
-      document.querySelectorAll('.copy-citation').forEach((button) => {
-        button.addEventListener('click', async () => {
-          const code = button.closest('.citation-box').querySelector('code');
-          try {
-            await copyText(code.textContent);
-            notify('Citation copied.');
-          } catch (_) {
-            const selection = window.getSelection();
-            const range = document.createRange();
-            range.selectNodeContents(code);
-            if (selection) { selection.removeAllRanges(); selection.addRange(range); }
-            notify('Citation selected. Press Ctrl+C or ⌘C to copy.');
-          }
-        });
-      });
     })();
   </script>
 </body>
