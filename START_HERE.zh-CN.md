@@ -19,6 +19,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 - `assets/profile.jpg`：正脸毕业照原图；圆形取景通过首页 CSS 控制。
 - `robots.txt`：允许搜索引擎抓取，并提供站点地图地址。
 - `sitemap.xml`：列出首页和网页版 CV 的正式地址。
+- `google95683f43e0f470c6.html`：用户提供的 Google Search Console 所有权验证文件；验证后继续保留文件名与内容。
 - `CHECKS.md`：本次检查结果及测试边界。
 - `.nojekyll`：静态站点标记，迁移网站时保留。
 
@@ -36,7 +37,9 @@ About、Research、Publications 和 Education 都在同一页。启用 JavaScrip
 
 已按用户要求开放搜索收录：两个页面均使用 `index, follow`，`robots.txt` 允许抓取，`sitemap.xml` 列出首页和 CV。canonical 使用正式地址 `https://xxwlyl.github.io/` 和 `https://xxwlyl.github.io/cv.html`。这些设置允许抓取和收录，不保证立即出现在搜索结果中。
 
-可在 Google Search Console 或 Bing Webmaster Tools 验证网站所有权后提交 `https://xxwlyl.github.io/sitemap.xml`；当前未代为提交或验证所有权。未来更换域名时，需同步修改两页 canonical、首页 `og:url`、`robots.txt` 和 `sitemap.xml` 中的地址。
+Google Search Console 使用“网址前缀”资源 `https://xxwlyl.github.io/` 和“HTML 文件上传”验证方式。已按用户提供的内容放置验证文件，发布后地址为 `https://xxwlyl.github.io/google95683f43e0f470c6.html`。文件部署完成后，仍需用户在自己的 Search Console 中点击“验证”；部署文件本身不代表 Google 已确认所有权。
+
+验证成功后，在“网址检查”中输入 `https://xxwlyl.github.io/` 并请求编入索引；在“站点地图”中提交 `https://xxwlyl.github.io/sitemap.xml`。当前未代为执行账号内的验证或索引提交。未来更换域名时，需同步修改两页 canonical、首页 `og:url`、`robots.txt` 和 `sitemap.xml` 中的地址，并重新确认 Search Console 资源及验证方式。
 
 原始资料、解析记录及浏览器测试工具应一直放在网站目录外。迁移时仅复制本目录，不要把其上级目录作为网站根目录。
 
