@@ -15,7 +15,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 ## 文件
 
 - `index.html`：个人简介、研究方向、论文及教育经历。
-- `cv.html`：网页版 CV，另含技能与语言。点击 Print / Save as PDF 可调用浏览器打印。
+- `cv.html`：网页版 CV，包含研究兴趣、合作信息、教育和论文。点击 Print / Save as PDF 可调用浏览器打印。
 - `assets/profile.jpg`：生活照原图；圆形取景通过首页 CSS 控制。
 - `CHECKS.md`：本次检查结果及测试边界。
 - `.nojekyll`：静态站点标记，迁移网站时保留。
