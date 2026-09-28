@@ -29,9 +29,9 @@
     .cv-section { margin-top: 30px; }
     h2 { color: var(--ink); font-size: 16px; letter-spacing: -.15px; font-weight: 650; margin: 0 0 15px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
     p { margin: 0 0 10px; }
-    .entry { display: grid; grid-template-columns: 122px minmax(0,1fr); gap: 20px; margin-bottom: 18px; }
+    .entry { display: grid; grid-template-columns: 136px minmax(0,1fr); align-items: baseline; gap: 20px; margin-bottom: 18px; }
     .entry:last-child { margin-bottom: 0; }
-    .date { color: var(--muted); font-size: 11px; padding-top: 2px; }
+    .date { color: var(--muted); font-size: 11px; white-space: nowrap; font-variant-numeric: tabular-nums; }
     .entry h3 { font-size: 13px; margin: 0 0 3px; font-weight: 600; color: var(--ink); }
     .entry p { margin: 0; font-size: 12px; }
     .muted { color: var(--muted); }
@@ -61,7 +61,7 @@
       .contact { font-size: 8pt; }
       .cv-section { margin-top: 19px; }
       h2 { font-size: 11pt; margin-bottom: 10px; padding-bottom: 5px; break-after: avoid; }
-      .entry { grid-template-columns: 100px minmax(0,1fr); gap: 17px; margin-bottom: 10px; }
+      .entry { grid-template-columns: 130px minmax(0,1fr); gap: 17px; margin-bottom: 10px; }
       .entry h3 { font-size: 9pt; }
       .entry p, .compact, .publication-list { font-size: 8pt; }
       .date { font-size: 8pt; }
@@ -89,8 +89,8 @@
     </section>
     <section class="cv-section" aria-labelledby="education-heading">
       <h2 id="education-heading">Education</h2>
-      <div class="entry"><span class="date">Sep 2024 – Present</span><div><h3>Ph.D. in Software Engineering and System Software</h3><p>Peking University · Beijing, China</p><p>Research focus: Memory Management in Operating Systems</p><p class="muted">Advisor: <a href="https://taoxiease.github.io/">Tao Xie</a></p></div></div>
-      <div class="entry"><span class="date">Sep 2020 – Jun 2024</span><div><h3>B.S. in Computer Science and Technology</h3><p>Yuanpei College</p><h3>B.Econ. in Economics</h3><p>National School of Development</p><p>Peking University · Beijing, China</p><p class="muted">Advisor: <a href="https://taoxiease.github.io/">Tao Xie</a></p></div></div>
+      <div class="entry"><span class="date">Sep 2024 – Present</span><div><h3>Peking University</h3><p>Ph.D. in Software Engineering and System Software</p><p>Research focus: Memory Management in Operating Systems</p><p class="muted">Beijing, China · Advisor: <a href="https://taoxiease.github.io/">Tao Xie</a></p></div></div>
+      <div class="entry"><span class="date">Sep 2020 – Jun 2024</span><div><h3>Peking University</h3><p>B.S. in Computer Science and Technology · Yuanpei College</p><p>B.Econ. in Economics · National School of Development</p><p class="muted">Beijing, China · Advisor: <a href="https://taoxiease.github.io/">Tao Xie</a></p></div></div>
     </section>
     <section class="cv-section" aria-labelledby="publications-heading">
       <h2 id="publications-heading">Publications</h2>
