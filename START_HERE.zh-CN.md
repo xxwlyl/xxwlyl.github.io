@@ -21,7 +21,6 @@ python3 -m http.server 8000 --bind 127.0.0.1
 - `sitemap.xml`：列出首页和网页版 CV 的正式地址。
 - `CHECKS.md`：本次检查结果及测试边界。
 - `.nojekyll`：静态站点标记，迁移网站时保留。
-- `README.md`：CV 解析与后续维护约定；其中模板示例仅用于说明。
 
 网站不依赖外部字体、分析服务或前端框架。正文与导航在禁用 JavaScript 时仍可使用。
 
