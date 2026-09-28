@@ -25,6 +25,10 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 网站不依赖外部字体、分析服务或前端框架。正文与导航在禁用 JavaScript 时仍可使用。
 
+About、Research、Publications 和 Education 都在同一页。启用 JavaScript 时，普通点击栏目、姓名或 Back to top 只滚动并更新当前定位地址，不新增浏览器历史记录；“返回”可回到上一个实际访问的页面。直接打开带 `#publications` 等标记的链接仍能定位栏目，Ctrl/Cmd 点击及中键打开链接保留浏览器默认行为。禁用 JavaScript 时使用原生锚点导航。
+
+此前已经产生的栏目跳转历史不会被自动清除；可在新标签页重新打开主页体验更新后的返回行为。
+
 ## 后续修改
 
 两份 HTML 独立保存正文，修改姓名、教育或论文时需要同时更新。Blowfish、SIGIR 2026 的 EDQC 和 ComGAT-PPIS 均提供已核实的 Paper、Code 链接；Chameleon 暂不添加资源链接。Paper 指向出版社页面或公开预印本，Code 指向对应的作者代码仓库。BibTeX 展示和复制功能已移除。
