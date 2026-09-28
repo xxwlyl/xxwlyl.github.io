@@ -52,7 +52,6 @@
     .site-nav a { display: inline-flex; align-items: center; min-height: 44px; position: relative; color: var(--muted); font-size: 14px; font-weight: 500; text-decoration: none; white-space: nowrap; }
     .site-nav a:hover, .site-nav a[aria-current="location"] { color: var(--accent); }
     .site-nav a[aria-current="location"]::after { content: ""; position: absolute; bottom: 1px; height: 2px; left: 0; right: 0; background: var(--accent); }
-    .site-nav .nav-cv { gap: 5px; }
     .menu-toggle { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 6px; background: white; color: var(--ink); cursor: pointer; }
     .page-shell { max-width: var(--page-width); margin: 0 auto; padding: 47px 0 86px; display: grid; grid-template-columns: 235px minmax(0, 1fr); gap: 70px; }
     .profile { align-self: start; position: sticky; top: 126px; }
@@ -67,8 +66,6 @@
     .profile-socials li { margin: 0 0 4px; }
     .social-link span { min-width: 0; overflow-wrap: anywhere; }
     .social-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); min-height: 32px; }
-    .cv-link { display: inline-flex; gap: 10px; align-items: center; min-height: 42px; border: 1px solid #cbd9df; border-radius: 5px; padding: 7px 14px; color: var(--accent); text-decoration: none; font-size: 13px; font-weight: 550; transition: background .15s ease; }
-    .cv-link:hover { background: var(--accent-tint); }
     .content { min-width: 0; }
     .section { margin-bottom: 41px; }
     .section:last-child { margin-bottom: 0; }
@@ -104,8 +101,6 @@
     .timeline .date { font-size: 12px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
     .timeline h3 { margin: 0 0 3px; font-size: 15px; }
     .timeline p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
-    .contact-line { margin: 30px 0 0; border-top: 1px solid var(--line); padding-top: 24px; font-size: 13px; color: var(--muted); }
-    .contact-line a { text-decoration: none; }
     .page-footer { border-top: 1px solid var(--line); background: var(--subtle); color: var(--muted); }
     .footer-inner { max-width: var(--page-width); margin: 0 auto; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 11px; }
     .footer-inner a { color: var(--muted); text-decoration: none; }
@@ -145,7 +140,6 @@
       .profile-socials { margin: 12px 0 16px; border: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 18px; font-size: 12px; }
       .profile-socials li { margin: 0; }
       .social-link { gap: 6px; }
-      .cv-link { min-height: 37px; padding: 5px 11px; font-size: 12px; }
       h1 { font-size: 28px; }
       h2 { font-size: 23px; }
       .intro { font-size: 15px; }
@@ -166,7 +160,7 @@
       *, *::before, *::after { transition: none !important; }
     }
     @media print {
-      .masthead, .menu-toggle, .footer-right, .cv-link { display: none !important; }
+      .masthead, .menu-toggle, .footer-right { display: none !important; }
       body { color: #222; font-size: 11pt; }
       .page-shell { margin: 0; padding: 0; gap: 28px; grid-template-columns: 160px minmax(0,1fr); }
       .profile { position: static; }
@@ -182,14 +176,11 @@
   <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
-    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8l-5-5ZM14 3v5h5M8 12h8m-8 4h6"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
   </svg>
 
   <header class="masthead" id="top">
     <div class="masthead-inner">
-      <!-- Profile details are also maintained in cv.html. -->
       <a class="brand" href="#about" aria-label="Yilong Luo — home"><span class="brand-name">Yilong Luo</span></a>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false">
         <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
@@ -199,7 +190,6 @@
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#education">Education</a>
-        <a class="nav-cv" href="cv.html">CV <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </nav>
     </div>
   </header>
@@ -218,7 +208,6 @@
         <ul class="profile-socials" aria-label="Contact">
           <li><a class="social-link" href="mailto:yilong.luo@stu.pku.edu.cn"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>yilong.luo@stu.pku.edu.cn</span></a></li>
         </ul>
-        <a class="cv-link" href="cv.html"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Curriculum Vitae <span aria-hidden="true">↗</span></a>
       </div>
     </aside>
 
@@ -236,7 +225,6 @@
         <p>If you are interested in collaborating with me, please feel free to <a href="mailto:yilong.luo@stu.pku.edu.cn">contact me</a>.</p>
       </section>
 
-      <!-- Keep titles, author order, venues, and dates consistent with cv.html. -->
       <section class="section" id="publications" aria-labelledby="publications-title">
         <div class="section-heading"><h2 id="publications-title">Publications</h2><span class="section-number" aria-hidden="true">02</span></div>
         <article class="publication" aria-labelledby="paper-c1">
@@ -303,7 +291,6 @@
               <p>B.S. in Computer Science and Technology · Yuanpei College<br>B.Econ. in Economics · National School of Development<br>Advisor: <a href="https://taoxiease.github.io/">Tao Xie</a></p></div>
           </li>
         </ul>
-        <p class="contact-line">For more about my background, see my <a href="cv.html">curriculum vitae <span aria-hidden="true">↗</span></a>.</p>
       </section>
     </main>
   </div>

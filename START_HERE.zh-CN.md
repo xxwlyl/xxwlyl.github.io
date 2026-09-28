@@ -15,10 +15,9 @@ python3 -m http.server 8000 --bind 127.0.0.1
 ## 文件
 
 - `index.html`：个人简介、研究方向、论文及教育经历。
-- `cv.html`：网页版 CV，包含研究兴趣、教育和论文；页面不再显示打印按钮或打印说明。
 - `assets/profile.jpg`：正脸毕业照原图；圆形取景通过首页 CSS 控制。
 - `robots.txt`：允许搜索引擎抓取，并提供站点地图地址。
-- `sitemap.xml`：列出首页和网页版 CV 的正式地址。
+- `sitemap.xml`：列出首页的正式地址。
 - `google95683f43e0f470c6.html`：用户提供的 Google Search Console 所有权验证文件；验证后继续保留文件名与内容。
 - `CHECKS.md`：本次检查结果及测试边界。
 - `.nojekyll`：静态站点标记，迁移网站时保留。
@@ -31,21 +30,21 @@ About、Research、Publications 和 Education 都在同一页。启用 JavaScrip
 
 ## 后续修改
 
-两份 HTML 独立保存正文，修改姓名、教育或论文时需要同时更新。Blowfish、SIGIR 2026 的 EDQC 和 ComGAT-PPIS 均提供已核实的 Paper、Code 链接；Chameleon 暂不添加资源链接。Paper 指向出版社页面或公开预印本，Code 指向对应的作者代码仓库。BibTeX 展示和复制功能已移除。
+修改姓名、教育或论文时，更新 `index.html` 中对应内容。Blowfish、SIGIR 2026 的 EDQC 和 ComGAT-PPIS 均提供已核实的 Paper、Code 链接；Chameleon 暂不添加资源链接。Paper 指向出版社页面或公开预印本，Code 指向对应的作者代码仓库。BibTeX 展示和复制功能已移除。
 
-已有网页 CV 入口应继续保留。以后添加经确认可公开的 PDF 简历时，可另加一个 PDF 下载入口。当前网站没有提供 PDF 附件。
+个人简介、研究、论文和教育经历统一展示在首页。已按用户要求移除重复的独立 CV 页面及入口；原始 CV 仅作为资料来源，当前网站没有提供 PDF 附件。
 
-已按用户要求开放搜索收录：两个页面均使用 `index, follow`，`robots.txt` 允许抓取，`sitemap.xml` 列出首页和 CV。canonical 使用正式地址 `https://xxwlyl.github.io/` 和 `https://xxwlyl.github.io/cv.html`。这些设置允许抓取和收录，不保证立即出现在搜索结果中。
+已按用户要求开放搜索收录：首页使用 `index, follow`，`robots.txt` 允许抓取，`sitemap.xml` 仅列出首页。canonical 使用正式地址 `https://xxwlyl.github.io/`。这些设置允许抓取和收录，不保证立即出现在搜索结果中。
 
 Google Search Console 使用“网址前缀”资源 `https://xxwlyl.github.io/` 和“HTML 文件上传”验证方式。已按用户提供的内容放置验证文件，发布后地址为 `https://xxwlyl.github.io/google95683f43e0f470c6.html`。文件部署完成后，仍需用户在自己的 Search Console 中点击“验证”；部署文件本身不代表 Google 已确认所有权。
 
-验证成功后，在“网址检查”中输入 `https://xxwlyl.github.io/` 并请求编入索引；在“站点地图”中提交 `https://xxwlyl.github.io/sitemap.xml`。当前未代为执行账号内的验证或索引提交。未来更换域名时，需同步修改两页 canonical、首页 `og:url`、`robots.txt` 和 `sitemap.xml` 中的地址，并重新确认 Search Console 资源及验证方式。
+验证成功后，在“网址检查”中输入 `https://xxwlyl.github.io/` 并请求编入索引；在“站点地图”中提交 `https://xxwlyl.github.io/sitemap.xml`。当前未代为执行账号内的验证或索引提交。未来更换域名时，需同步修改首页 canonical、`og:url`、`robots.txt` 和 `sitemap.xml` 中的地址，并重新确认 Search Console 资源及验证方式。
 
 原始资料、解析记录及浏览器测试工具应一直放在网站目录外。迁移时仅复制本目录，不要把其上级目录作为网站根目录。
 
 ## GitHub Pages 发布
 
-仓库的 `main` 分支根目录直接保存 `index.html`、`cv.html`、`.nojekyll` 和 `assets/`。在仓库 `Settings → Pages` 中选择 `Deploy from a branch`、`main` 和 `/(root)`，点击 Save。
+仓库的 `main` 分支根目录直接保存 `index.html`、`.nojekyll`、`assets/`、`robots.txt`、`sitemap.xml` 和 Google 验证文件。在仓库 `Settings → Pages` 中选择 `Deploy from a branch`、`main` 和 `/(root)`，点击 Save。
 
 网站目标地址为 `https://xxwlyl.github.io/`。是否已上线应以实际部署记录及访问结果为准，提交源码成功本身不表示 Pages 已启用。
 
