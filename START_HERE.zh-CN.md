@@ -15,7 +15,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 ## 文件
 
 - `index.html`：个人简介、研究方向、论文及教育经历。
-- `cv.html`：网页版 CV，包含研究兴趣、教育和论文。点击 Print / Save as PDF 可调用浏览器打印。
+- `cv.html`：网页版 CV，包含研究兴趣、教育和论文；页面不再显示打印按钮或打印说明。
 - `assets/profile.jpg`：正脸毕业照原图；圆形取景通过首页 CSS 控制。
 - `robots.txt`：允许搜索引擎抓取，并提供站点地图地址。
 - `sitemap.xml`：列出首页和网页版 CV 的正式地址。
