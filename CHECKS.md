@@ -1,6 +1,6 @@
 # 个性化主页检查记录
 
-检查日期：2026-09-28。本轮更新：移除全部 BibTeX，在主页和 CV 中为 Blowfish、EDQC、ComGAT-PPIS 添加 Paper、Code 链接；Chameleon 不添加资源链接。
+检查日期：2026-09-28。本轮更新：主页合作句加入 Fortunately；主页和 CV 的研究描述统一为用户指定的 computer systems 表述。
 
 ## 本次结果
 
@@ -36,7 +36,7 @@
 ## 已测网页文件 SHA-256
 
 ```text
-index.html         9b4c7b4f2c4270d6ec68e30b7135a91bf22f0307341525477642260fd907d8eb
-cv.html            0ecfc8be8a4228fc52b9db83559455fff262b4aca056002a13b1e238e5d86573
+index.html         3e0bab363775a1229c16b57766d3f29e9720ea4cc367893f23db66886d4b6732
+cv.html            2b5e8c8540b41b2347362021d8f0273352b1d7eded7e915e24c1343d435fcfc3
 assets/profile.jpg dc42455809f174d571186ea2d13695e175810e142272a5bb60d80f276d0f7312
 ```
